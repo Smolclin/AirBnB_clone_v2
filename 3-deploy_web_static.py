@@ -6,7 +6,7 @@ servers, using the function deploy '''
 from fabric.api import env, local, put, run
 from datetime import datetime
 from os.path import exists, isdir
-env.host = ['54.236.52.43', '54.237.96.155']
+env.hosts = ['54.236.52.43', '54.237.96.155']
 
 
 def do_pack():
