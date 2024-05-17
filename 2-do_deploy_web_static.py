@@ -14,7 +14,7 @@ def do_deploy(archive_path):
         return False
     try:
         file_n = archive_path.split("/")[-1]
-        no_exit = file_n.split(".")[0]
+        no_ext = file_n.split(".")[0]
         path = "/data/web_static/releases/"
         put(archive_path, '/tmp/')
         run('mkdir -p {}{}/'.format(path, no_ext))
@@ -27,10 +27,3 @@ def do_deploy(archive_path):
         return True
     except:
         return False
-
-    def deploy():
-        ''' Creates and distributes archive to the web server'''
-        archive_path = do_pack()
-        if archive_path is None:
-            return False
-        return do_deploy(archive_path)
