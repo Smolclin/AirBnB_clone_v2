@@ -6,6 +6,7 @@ using the function do_deploy '''
 from datetime import datetime
 from fabric.api import *
 
+
 def do_pack():
     ''' making an archive on web_static folder '''
 
