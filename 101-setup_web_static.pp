@@ -19,7 +19,7 @@ $nginx_config = "server {
        root /var/www/html;
        internal;
      }
-}
+}"
 package { 'nginx':
   ensure   => 'present',
   provider => 'apt'
